@@ -18,7 +18,7 @@ $^3$ The Hong Kong Polytechnic University
 - The first diffusion model designed for low-light image enhancement (LLIE) in raw space. 
 - Better performance than vanilla conditional diffusion models for image restoration: better performance using fewer inference steps (e.g., only 3 steps) and fewer parameters.
 - Can be combined with SOTA noise models and denoising backbones.
-- (*For using LLIE in the sRGB space, we recommend our recent work
+- (*For using diffusion models for the LLIE task in the sRGB space, we recommend our recent work
 [ShadowDiffusion: When Degradation Prior Meets Diffusion Model for Shadow Removal](https://openaccess.thecvf.com/content/CVPR2023/papers/Guo_ShadowDiffusion_When_Degradation_Prior_Meets_Diffusion_Model_for_Shadow_Removal_CVPR_2023_paper.pdf) (Table 6 in the paper).*)
 
 ## Overall
