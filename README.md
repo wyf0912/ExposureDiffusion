@@ -4,9 +4,9 @@ Welcome! This is the official implementation of the paper "[ExposureDiffusion: L
 
 - *Yufei Wang, Yi Yu, Wenhan Yang, Lanqing Guo, Lap-Pui Chau, Alex C. Kot, Bihan Wen*
 
-- *$^1$ Nanyang Technological University 
+- $^1$ Nanyang Technological University 
 $^2$ Peng Cheng Laboratory
-$^3$ The Hong Kong Polytechnic University*
+$^3$ The Hong Kong Polytechnic University
 
 ## News
 **_(2023.8.08)_**: The training and testing codes are released
