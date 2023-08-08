@@ -9,7 +9,8 @@ $^2$ Peng Cheng Laboratory
 $^3$ The Hong Kong Polytechnic University*
 
 ## News
-**_(2023.8.07)_**: The training and testing codes are released
+**_(2023.8.08)_**: The training and testing codes are released
+
 **_(2023.7.14)_**: 🎉 Our paper was accepted by ICCV 2023
 
 
@@ -68,13 +69,13 @@ CUDA_VISIBLE_DEVICES=0 python3 train_syn.py --name sid_PGru_naf2 --include 4 --n
 ```
 
 
-## Pretrained models
-You can download the pretrained models from the [google drive], which includes the following models
+## Pre-trained models
+You can download the pre-trained models from [google drive], which includes the following models
 - The UNet model trained on P+g noise model, ELD noise model, and real-captured paired dataset. 
 - The NAFNet model trained on P+g and ELD noise models.
 
 ## Test
-For the evaluation of models, you shall use the same hyper-parameters (i.e., the same usage of ```--concat_origin``` ) with the training ones. For example, if you want to evalute the performance of the models based on NAFNet, you shell use the following commands
+For the evaluation of models, you shall use the same hyper-parameters (i.e., the same usage of ```--concat_origin``` ) with the training ones. For example, if you want to evaluate the performance of the models based on NAFNet, you shell use the following commands
 
 ```bash
 # Test of the ELD+NAFNet model
@@ -85,31 +86,31 @@ python3 test_SID.py --model eld_iter_model --model_path "the path of the ckpt" -
 ```
 
 
-For the evaluation on ELD dataset, we just keep the other settings the same, and only change the file name from ```test_SID.py``` to ```test_ELD.py```. For example, the command to evaluate the performance of the UNet model trained on real-data is as follows
+For the evaluation of ELD dataset, we just keep the other settings the same, and only change the file name from ```test_SID.py``` to ```test_ELD.py```. For example, the command to evaluate the performance of the UNet model trained on real data is as follows
 
 ```bash
 python3 test_SID.py --model eld_iter_model --model_path checkpoints/sid_real/model_300_00386400.pt --concat_origin --adaptive_res_and_x0 --with_photon -r --include 4
 ```
 
-To evaluate the effect of different inference steps, you can change the value of ```--iter_num``` (default: 2). You can get a similar result as the following one where we evalute the quality of the predicted clean image of each step
+To evaluate the effect of different inference steps, you can change the value of ```--iter_num``` (default: 2). You can get a similar result as the following one where we evaluate the quality of the predicted clean image of each step
 
 <p align="center">
 <img src="./images_github/iter.png" width="70%" />
 </p>
 
-- The proposed method can get converged in 3 steps, which is much faster than DDIM. Besides better performance are achieved under a smaller number of parameters.
+- The proposed method can get converged in 3 steps, which is much faster than DDIM. Besides, better performance is achieved under a smaller number of parameters.
 
 
 ## Results
 
 <p align="center">
-<img src="./images_github/different_noise_models.png" width="70%" />
+<img src="./images_github/different_noise_models.png" width="65%" />
 </p>
 
 - The proposed method can be combined with real-captured paired data/different SOTA noise models. Stable improvement are achieved.
 
 <p align="center">
-<img src="./images_github/different_bacbones.png" width="70%" />
+<img src="./images_github/different_bacbones.png" width="65%" />
 </p>
 
 - The proposed method can also be combined with different backbone networks, e.g., SOTA denosing backbone NAFNet. Models of different sizes have significant performance improvements
