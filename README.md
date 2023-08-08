@@ -44,7 +44,7 @@ $^3$ The Hong Kong Polytechnic University
 ## Prerequisites
 Please install the packages required by [ELD](https://github.com/Vandermode/ELD).
 
-Beisdes, you may need to download the ELD dataset and SID dataset as follows
+Besides, you may need to download the ELD dataset and SID dataset as follows
 
 - ELD ([official project](https://github.com/Vandermode/ELD)): [download (11.46 GB)](https://drive.google.com/file/d/13Ge6-FY9RMPrvGiPvw7O4KS3LNfUXqEX/view?usp=sharing)  
 - SID ([official project](https://github.com/cchen156/Learning-to-See-in-the-Dark)):  [download (25 GB)](https://storage.googleapis.com/isl-datasets/SID/Sony.zip)
@@ -74,9 +74,9 @@ CUDA_VISIBLE_DEVICES=0 python3 train_syn.py --name sid_PGru_naf2 --include 4 --n
 
 
 ## Pre-trained models
-You can download the pre-trained models from [google drive], which includes the following models
-- The UNet model trained on P+g noise model, ELD noise model, and real-captured paired dataset. 
-- The NAFNet model trained on P+g and ELD noise models.
+You can download the pre-trained models from [google drive](https://drive.google.com/drive/folders/1qdxZBg-GsYxHaDj3Zd_NikYiweqDOFzo?usp=drive_link), which includes the following models 
+- The UNet model trained on P+g noise model (```SID_Pg.pt```), ELD noise model (```SID_PGru.pt```), and real-captured paired dataset (```SID_real.pt```). 
+- The NAFNet model trained on P+g (```SID_pg_naf2.pt```) and ELD noise models (```SID_PGru_naf2.pt```).
 
 ## Test
 For the evaluation of models, you shall use the same hyper-parameters (i.e., the same usage of ```--concat_origin``` ) with the training ones. For example, if you want to evaluate the performance of the models based on NAFNet, you shell use the following commands
